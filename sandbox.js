@@ -2,13 +2,25 @@
 // inputs.forEach(input => {
 //     console.log(input);
 // })
-// Type Basics
-var character = 'mario';
-var age = 30;
-var isBlackBelt = false;
-// Error
-// character = 50
-var circ = function (diameter) {
-    return diameter * Math.PI;
-};
-console.log(circ(7.5));
+// // Type Basics
+// let character = 'mario'
+// let age = 30
+// let isBlackBelt = false
+// // Error
+// // character = 50
+// const circ = (diameter:number) => {
+//     return diameter * Math.PI
+// }
+// console.log(circ(7.5))
+// arrays
+// let names:string[] = ['mario','yoshi', 'luigi']
+// names.push('toad')
+// // error
+// // names.push(3)
+// let mixed = ['ken', 4, 'ramy', '9']
+// // objects
+// let ninja = {
+//     name:'mario',
+//     belt:'black',
+//     age:50
+// }
