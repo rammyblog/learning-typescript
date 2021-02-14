@@ -1,7 +1,7 @@
 // const inputs = document.querySelectorAll('input')
 // inputs.forEach(input => {
 //     console.log(input);
-    
+
 // })
 
 
@@ -35,3 +35,24 @@
 //     belt:'black',
 //     age:50
 // }
+
+
+// Explicit tpyes
+let character:string;
+let age:number;
+let isLoggedIn: boolean;
+
+// arrays
+let ninjas: string[] = []
+
+// union types
+let mixed: (string | number|boolean)[] = []
+mixed.push('hello')
+mixed.push(23)
+let uid:string|number;
+uid ='123'
+uid =123
+
+// objects
+let ninjaOne: object;
+ninjaOne = {name:'yoshi', age:30}

@@ -24,3 +24,19 @@
 //     belt:'black',
 //     age:50
 // }
+// Explicit tpyes
+var character;
+var age;
+var isLoggedIn;
+// arrays
+var ninjas = [];
+// union types
+var mixed = [];
+mixed.push('hello');
+mixed.push(23);
+var uid;
+uid = '123';
+uid = 123;
+// objects
+var ninjaOne;
+ninjaOne = { name: 'yoshi', age: 30 };
