@@ -37,22 +37,35 @@
 // }
 
 
-// Explicit tpyes
-let character:string;
-let age:number;
-let isLoggedIn: boolean;
+// // Explicit tpyes
+// let character:string;
+// let age:number;
+// let isLoggedIn: boolean;
 
-// arrays
-let ninjas: string[] = []
+// // arrays
+// let ninjas: string[] = []
 
-// union types
-let mixed: (string | number|boolean)[] = []
-mixed.push('hello')
-mixed.push(23)
-let uid:string|number;
-uid ='123'
-uid =123
+// // union types
+// let mixed: (string | number|boolean)[] = []
+// mixed.push('hello')
+// mixed.push(23)
+// let uid:string|number;
+// uid ='123'
+// uid =123
 
-// objects
-let ninjaOne: object;
-ninjaOne = {name:'yoshi', age:30}
+// // objects
+// let ninjaOne: object;
+// ninjaOne = {name:'yoshi', age:30}
+
+// Dynamic types
+// let age:any = 25;
+// age = true
+// console.log(age)
+// let mixed :any[] = []
+// mixed.push(4)
+// mixed.push('hello')
+// mixed.push(true)
+// console.log(mixed)
+// let ninja: {name:any, age:any}
+// ninja = {name:'yoshi', age:30}
+// console.log(ninja);
