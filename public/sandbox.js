@@ -54,17 +54,44 @@
 // ninja = {name:'yoshi', age:30}
 // console.log(ninja);
 // Function Basics
+// let greet:Function
+// greet = () => {
+//     console.log('heelo again');
+// }
+// const add =(a:number, b:number, c:number|string=10):void => {
+//     console.log(a+b)
+//     console.log(c);
+// }
+// add(5,10,20)
+// const minus = (a:number, b:number):number => {
+//     return a+b
+// }
+// let result = minus(10, 7)
+// // Type Aliases
+// type StringOrNum = string|number
+// type objWIthName = {name:string, uid: StringOrNum}
+// const logDetails = (uid:StringOrNum, item:string) => {
+//     console.log(`${item} has a uid of ${uid}`);
+// }
+// const greet = (user:objWIthName) => {
+//     console.log(`${user.name} says hello`);
+// }
+// Function signatures
+// let greet : Function
 var greet;
-greet = function () {
-    console.log('heelo again');
+greet = function (name, greeting) {
+    console.log(name + " says " + greeting);
 };
-var add = function (a, b, c) {
-    if (c === void 0) { c = 10; }
-    console.log(a + b);
-    console.log(c);
+var calc;
+calc = function (numOne, numTwo, action) {
+    if (action == 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 };
-add(5, 10, 20);
-var minus = function (a, b) {
-    return a + b;
+var logDetails;
+logDetails = function (ninja) {
+    console.log(ninja.name + " is " + ninja.age + " years old");
 };
-var result = minus(10, 7);

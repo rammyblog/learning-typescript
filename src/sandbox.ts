@@ -73,19 +73,62 @@
 
 // Function Basics
 
-let greet:Function
+// let greet:Function
 
-greet = () => {
-    console.log('heelo again');
+// greet = () => {
+//     console.log('heelo again');
+    
+// }
+// const add =(a:number, b:number, c:number|string=10):void => {
+//     console.log(a+b)
+//     console.log(c);
+    
+// }
+// add(5,10,20)
+// const minus = (a:number, b:number):number => {
+//     return a+b
+// }
+// let result = minus(10, 7)
+
+
+// // Type Aliases
+
+// type StringOrNum = string|number
+// type objWIthName = {name:string, uid: StringOrNum}
+
+// const logDetails = (uid:StringOrNum, item:string) => {
+//     console.log(`${item} has a uid of ${uid}`);
+    
+// }
+
+// const greet = (user:objWIthName) => {
+//     console.log(`${user.name} says hello`);
+    
+// }
+
+
+// Function signatures
+
+// let greet : Function
+
+let greet:(a:string, b:string) => void;
+greet = (name:string, greeting:string) => {
+    console.log(`${name} says ${greeting}`);
+}
+
+let calc:(a:number, b:number, c:string) =>number
+calc = (numOne:number, numTwo:number, action:string) => {
+    if(action == 'add'){
+        return numOne+numTwo
+    }else{
+        return numOne - numTwo
+    }
+}
+
+let logDetails : (obj:{name:string, age:number}) => void;
+
+type person ={name:string, age:number}
+logDetails = (ninja:person) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
     
 }
-const add =(a:number, b:number, c:number|string=10):void => {
-    console.log(a+b)
-    console.log(c);
-    
-}
-add(5,10,20)
-const minus = (a:number, b:number):number => {
-    return a+b
-}
-let result = minus(10, 7)
