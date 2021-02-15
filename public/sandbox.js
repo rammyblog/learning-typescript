@@ -53,4 +53,18 @@
 // let ninja: {name:any, age:any}
 // ninja = {name:'yoshi', age:30}
 // console.log(ninja);
-// 
+// Function Basics
+var greet;
+greet = function () {
+    console.log('heelo again');
+};
+var add = function (a, b, c) {
+    if (c === void 0) { c = 10; }
+    console.log(a + b);
+    console.log(c);
+};
+add(5, 10, 20);
+var minus = function (a, b) {
+    return a + b;
+};
+var result = minus(10, 7);
