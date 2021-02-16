@@ -1,4 +1,3 @@
-"use strict";
 // const anchor = document.querySelector('a')!
 // console.log(anchor.href)
 // // const form = document.querySelector('form')!
@@ -13,21 +12,13 @@
 //     e.preventDefault()
 //     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 // })
-// Classes
-var Invoice = /** @class */ (function () {
-    function Invoice(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    Invoice.prototype.format = function () {
-        return this.client + " owes $" + this.amount + " for " + this.details;
-    };
-    return Invoice;
-}());
+import { Invoice } from './classes/Invoice.js';
 var invOne = new Invoice('mario', 'work on the mario website', 250);
 var invTwo = new Invoice('yuhsi', 'work on the yuhsi website', 300);
 // console.log(invOne.format(), invTwo);
 var invoices = [];
 invoices.push(invOne);
-console.log(invoices);
+invoices.push(invTwo);
+invoices.forEach(function (inv) {
+    console.log(inv.client, inv.amount, inv.format());
+});
