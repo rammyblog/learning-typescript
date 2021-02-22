@@ -1,9 +1,16 @@
 // const anchor = document.querySelector('a')!
 // console.log(anchor.href)
-// // const form = document.querySelector('form')!
-// const form = document.querySelector('.new-item-form') as HTMLFormElement
-// // console.log(form.children)
+// const form = document.querySelector('form')!
 import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+// let docOne:HasFormatter;
+// let docTwo:HasFormatter;
+// docOne = new Invoice('tunde', 'web work', 250)
+// docTwo = new Invoice('Mario', 'Pluming work', 200)
+// let docs:HasFormatter[] =[]
+// docs.push(docOne)
+// docs.push(docTwo)
+// console.log(docs)
 var invOne = new Invoice('mario', 'work on the mario website', 250);
 var invTwo = new Invoice('yuhsi', 'work on the yuhsi website', 300);
 // console.log(invOne.format(), invTwo);
@@ -29,3 +36,21 @@ var greetPerson = function (person) {
 };
 console.log(greetPerson(me));
 console.log(me);
+var form = document.querySelector('.new-item-form');
+// console.log(form.children)
+// inputs
+var type = document.querySelector('#type');
+var tofrom = document.querySelector('#tofrom');
+var details = document.querySelector('#details');
+var amount = document.querySelector('#amount');
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
+});
